@@ -58,7 +58,7 @@ Each raw hyperspectral microscope imaging (HMI) dataset consists of the followin
 
 ### Single-cell segmentation (Proprietary USDA-ARS Code)
 
-The `bacterial_hmi` module is a locally developed tool for segmenting single bacterial cells from raw HMI data. This module, created in collaboration with USDA-ARS, is restricted to internal use and is not included in this repository. For methodological details, please refer to [this work](https://doi.org/10.1016/j.compag.2023.107802).
+The `bacterial_hmi` package is a locally developed tool for segmenting single bacterial cells from raw HMI data. This module, created in collaboration with USDA-ARS, is restricted to internal use and is not included in this repository. For methodological details, please refer to [this work](https://doi.org/10.1016/j.compag.2023.107802).
 
 Example visualized output:
 
@@ -109,7 +109,7 @@ A **pseudo RGB** image is created by mapping three selected spectral wavelengths
 
     ```bash
     # Specify the path to your data directory here
-    input_dir = '/path/to/dataset/'
+    input_dir = '/path/to/dataset'
     output_dir = './outputs/classname'
     output_label = 'classname'
     ```
