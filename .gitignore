@@ -162,8 +162,5 @@ cython_debug/
 # Local files
 *.dat
 *.hdr
-Example_hypercube_EColi/
-qsaru_output/
 bacterial_hmi/models/
-bacterial_hmi_old/
 outputs/
