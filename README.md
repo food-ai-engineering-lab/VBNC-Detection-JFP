@@ -54,14 +54,6 @@ Each raw hyperspectral microscope imaging (HMI) dataset consists of the followin
 - `.png`: Pseudo RGB image providing a visual representation of the sample to quickly identify ROI.
 
 
-### Data path on local lab machine
-
-Our HMI datasets are selectively copied to: `/mnt/data/cifs/HMI/`. This is linked to MSU EGR Network Drive (See [Lab-SOPs](https://github.com/food-ai-engineering-lab/Lab-SOPs/tree/main/3-Lab-Data)) where we store all raw data.
-
-- **Normal**: `/mnt/data/cifs/HMI/0407-Ecoli-Live`
-- **VBNC**: `/mnt/data/cifs/HMI/0407-Ecoli-PAA`
-
-
 ## Data Pre-Processing
 
 ### Single-cell segmentation (Proprietary USDA-ARS Code)
@@ -155,17 +147,9 @@ arguments:
 
 For example: `python train.py -r /path/to/train/dataset/`
 
-```
-python train.py -r /mnt/projects/papameil/VBNC-detection/training/
-```
-
 The output will inculde several models with different epochs and losses found in lightning logs. Running the above command multiple times will result in different versions. Within lightning logs each version includes checkpoints which you will use to evaluate the models and images.
 
-Example checkpoint:
-
-```
-/mnt/projects/papameil/HMI-2/lightning_logs/version_37/checkpoints/mcolony-epoch=18-val_loss_epoch=0.35.ckpt
-```
+Example checkpoint: `/path/to/project/lightning_logs/version_X/checkpoints/model-epoch=NN-val_loss=XX.XX.ckpt`
 
 
 ## Model Evaluation
@@ -182,10 +166,6 @@ arguments:
 ```
 
 For example: `python evaluate.py -rt /path/to/train/dataset/ -r /path/to/test/dataset/ -c /path/to/checkpoint/ckpt_weights.ckpt`
-
-```
-python evaluate.py -rt /mnt/projects/papameil/VBNC-detection/training/ -r /mnt/projects/papameil/VBNC-detection/evaluate/ -c /mnt/projects/papameil/HMI-2/lightning_logs/version_37/checkpoints/mcolony-epoch=18-val_loss_epoch=0.35.ckpt
-```
 
 
 ## Example Outputs
