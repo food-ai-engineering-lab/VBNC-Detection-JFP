@@ -1,5 +1,3 @@
-# `bacterial_hmi`
-
 This folder is a placeholder for the proprietary `bacterial_hmi` package, which is not included in this public repository. 
 
 ## What Was Here
