@@ -11,7 +11,7 @@ This repository provides the code (excluding USDA-ARS proprietary components) an
 - [Model Training](#model-training)
 - [Model Evaluation](#model-evaluation)
 - [Example outputs](#example-outputs)
-- [Acknowledgements](#acknowledgements)
+- [Acknowledgments](#acknowledgments)
 
 
 ## Requirements 
